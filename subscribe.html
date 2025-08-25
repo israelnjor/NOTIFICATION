@@ -1,0 +1,84 @@
+<style>
+   .sub {
+      /* height: 20px; */
+      max-width: 400px;
+      border-radius: 10px;
+      border: 2px solid pink;
+      font-size: 18px;
+      padding: 5px;
+      text-align: center;
+      text-size-adjust:inherit;
+      margin: 5px;
+   }
+   .container {
+      background-color: rgba(199, 229, 247, 0.348);
+      font-family: Arial, sans-serif;
+      font-style: italic;
+      max-width: 400px;
+      padding: 20px;
+      line-height: 25px;
+      border-color: beige;
+      text-align: center;
+      border-radius: 10px;
+      margin-top: 100;
+      margin-left:130px ;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+   }
+   body, html {
+      background: url("STUDENT.jpg");
+      margin-top: 30px;
+      background-size:cover;
+      background-repeat: no-repeat;
+   }
+   .text {
+      font-family: arial;
+      text-align: center;
+      background-color: rgb(199, 229, 247);
+      padding-top: 20px;
+      padding-bottom: 15px;
+      border-radius: 5px;
+      text-decoration: underline;
+      color:rgb(95, 3, 3);
+      cursor: pointer;
+   }
+   .sign {
+      background-color: red;
+      padding: 10px;
+      width: 440px;
+      margin-left: 130px;
+      padding-left: 80px;
+      padding-right: 80;
+      margin-top: 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      border-color: aliceblue;
+      font-size: 18px;
+
+   }
+
+
+</style>
+
+<body>
+   <h2 class="text">Type Your Details below to Sign Up</h2>
+<div class="container">
+   <input class="sub" type="text" id="name" placeholder="Enter you name"><br>
+   <input class="sub" type="number" id="password" placeholder="create your password">
+</div>
+   <button class="sign" onclick="signUp()">Sign Up</button>
+
+<script>
+     function signUp() {
+       // get the name typed by user
+       let userName = document.getElementById("name").value;
+
+       // if name is empty
+       if (userName.trim() === "") {
+         alert("⚠ Please enter your name before signing up!");
+       } else {
+         alert("Hello " + userName + ", you have successfully signed up. Stay tuned!");
+       }
+     }
+</script>
+</body>  
